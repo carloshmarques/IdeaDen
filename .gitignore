@@ -1,8 +1,7 @@
 ###> carloshmarques/IdeaDen ###
 
 ##### Folders #####
-build/
-dist/
+
 node_modules/
 vendor/
 var/

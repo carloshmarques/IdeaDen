@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/*##################################################################*/
+/*  Main Sass file for the project. */
+/*##################################################################*/
+/* Routines */
+/* Variables and mixins */
+/* Base */
+/* Layout */
+body.glass-card {
+  position: relative;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  /* Transparência real — podes pôr 0 se quiseres vidro puro */
+  background-color: rgba(255, 255, 255, 0.15);
+  /* Cantos arredondados estilo picom */
+  border-radius: 12px;
+  /* Sombra suave */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  /* Brilho subtil tipo vidro molhado */
+}
+body.glass-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0));
+  pointer-events: none;
+}
+body.glass-card {
+  background-image: url("/img/wallhaven-m9r8g9.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 75vh;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Components */
+/*##################################################################*/
+/*  End Main Sass file */
+/*##################################################################*//*# sourceMappingURL=main.css.map */

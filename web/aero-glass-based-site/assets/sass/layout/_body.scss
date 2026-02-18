@@ -1,0 +1,19 @@
+body.glass-card {
+    @include picom-glass($blur: 1px, $opacity: 0.15);
+   
+
+    background-image: url('/img/wallhaven-m9r8g9.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    min-height: 75vh;
+    margin: 0;
+    padding: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+

@@ -1,0 +1,59 @@
+@mixin aero-glass($opacity: 0.25, $blur: 20px) {
+    backdrop-filter: blur($blur);
+    -webkit-backdrop-filter: blur($blur);
+
+    background: rgba(255, 255, 255, $opacity);
+
+    box-shadow: inset 0 0 0.5rem rgba(255, 255, 255, 0.4);
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 40%;
+         background: transparent(// totalmente transparente
+             linear-gradient(
+                 to bottom,
+                 rgba(255, 255, 255, 0.35),
+                 rgba(255, 255, 255, 0)
+             )
+     
+            rgba(255, 255, 255, 0.35),
+            rgba(255, 255, 255, 0)
+        );
+        pointer-events: none;
+    }
+    background: transparent; // totalmente transparente
+}
+@mixin picom-glass($blur: 20px, $opacity: 0.94) {
+    position: relative; // necessário para o ::before
+
+    backdrop-filter: blur($blur);
+    -webkit-backdrop-filter: blur($blur);
+
+    /* Transparência real — podes pôr 0 se quiseres vidro puro */
+    background-color: rgba(255, 255, 255, $opacity);
+
+    /* Cantos arredondados estilo picom */
+    border-radius: 12px;
+
+    /* Sombra suave */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.40);
+
+    /* Brilho subtil tipo vidro molhado */
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background: linear-gradient(
+            to bottom right,
+            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0)
+        );
+        pointer-events: none;
+    }
+}
+
