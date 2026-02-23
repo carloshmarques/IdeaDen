@@ -1,0 +1,33 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : 6 de dezembro de 2025 14:00:37
+   Source : C:\Users\carlo\Documents\GitHub\master\HydraLife\
+     Dest : C:\Users\carlo\Documents\GitHub\backups\master-backups\HydraLife_2025-12-06_14-00\
+
+    Files : *.*
+	    
+Exc Files : *.vsidx
+	    
+ Exc Dirs : .git
+	    .vs
+	    LifeCicles\Assets\Themes\Colorful-Plasma-Themes
+	    
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	  New Dir         12	C:\Users\carlo\Documents\GitHub\master\HydraLife\
+	    New File  		    1530	.gitignore100%  
+	    New File  		     179	.gitmodules100%  
+	    New File  		     993	CHANGELOG.md100%  
+	    New File  		       0	changelog_changes.py
+	    New File  		    1684	generate_tree.py100%  
+	    New File  		    4868	HydraBlueprint.md100%  
+	    New File  		    4701	HydraMap.txt100%  
+	    New File  		    1092	license100%  
+	    New File  		   23990	readme.md100%  
+	    New File  		      76	requirements.txt100%  
+	    New File  		       0	robocopy_log.txt
